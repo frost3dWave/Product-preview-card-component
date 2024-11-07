@@ -79,9 +79,10 @@ main {
     justify-content: center;
     margin-inline: 16px;
     border-radius: 0.625rem;
-    border: 1px solid black;
     position: relative;
     background-color: var(--clr-white);
+    max-block-size: 30.625rem;
+    max-inline-size: 18rem;
 }
 
 img {
@@ -99,13 +100,13 @@ img {
 }
 
 .product-description p{
-    font-size: 12px;
+    font-size: clamp(0.75rem, 0.6932rem + 0.2841vw, 0.875rem);
     color: var(--clr-grey-blue);
 }
 
 .product-description > p:first-child{
     font-family: var(--font-sans-serif), sans-serif;
-    font-size: 0.625rem;
+    font-size: clamp(0.625rem, 0.5682rem + 0.2841vw, 0.75rem);
     text-transform: uppercase;
     letter-spacing: 0.3em;
 
@@ -113,7 +114,7 @@ img {
 
 .product-description h2{
     font-family: var(--font-serif), serif;
-    font-size: 1.625rem;
+    font-size: clamp(1.625rem, 1.4545rem + 0.8523vw, 2rem);
     font-weight: 700;
     line-height: 1;
 } 
@@ -133,13 +134,13 @@ img {
 }
 
 .pricing-info .current-price {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.2727rem + 1.1364vw, 2rem);
     font-weight: 700;
     color: var(--clr-cyan);
 }
 .pricing-info > p:last-child {
     text-decoration: line-through;
-    font-size: 0.625rem;
+    font-size: clamp(0.625rem, 0.5682rem + 0.2841vw, 0.75rem);
 }
 
 button {
@@ -168,23 +169,31 @@ button:hover {
 @media (min-width: 48rem) {
     .wrapper {
         flex-direction: row;
-        block-size: 30.681875rem;
-        inline-size: calc(288px * 2);
-    }
-
-    .image-container {
-        block-size: 100%;
+        max-inline-size: calc(18rem * 2);
     }
 
     img {
-        block-size: 100%;
-        border-radius: 0.625rem, 0, 0.625rem, 0;
-        object-fit: contain;
+        border-radius: 0.625rem 0 0 0.625rem;
     }
 
     .product-description {
-        block-size: 100%;
+        min-block-size: 27rem;
+        max-inline-size: 18rem;
+        padding-top: 32px;
+        padding-bottom: 24px;
+        padding-inline: 32px;
+        gap: 12px;
+    }
+
+    .product-description h2 {
+        margin-bottom: 14px;
+    }
+
+    button {
+        margin-top: 0.5rem;
+        padding: 14px;
     }
 }
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
