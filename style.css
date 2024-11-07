@@ -1,0 +1,169 @@
+:root{
+    --clr-cyan: hsl(158, 36%, 37%);
+    --clr-cream: hsl(30, 38%, 92%);
+    --clr-dark-blue: hsl(212, 21%, 14%);
+    --clr-grey-blue: hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --font-sans-serif: "Montserrat";
+    --font-serif: "Fraunces";
+}
+/* CSS reset */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+/* 3. Add accessible line-height */
+    line-height: 1.5;
+/* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/*
+9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+/* MAIN CSS  */
+body {
+    background-color: var(--clr-cream);
+    font-weight: 500;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-block-size: 100dvh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 16px;
+    border-radius: 0.625rem;
+    border: 1px solid black;
+    position: relative;
+    background-color: var(--clr-white);
+}
+
+img {
+    border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.product-description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+    gap: 10px;
+    padding: 16px;
+}
+
+.product-description p{
+    font-size: 12px;
+    color: var(--clr-grey-blue);
+}
+
+.product-description > p:first-child{
+    font-family: var(--font-sans-serif), sans-serif;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+
+}
+
+.product-description h2{
+    font-family: var(--font-serif), serif;
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 1;
+} 
+
+.product-description h2+p {
+    font-family: var(--font-sans-serif), sans-serif;
+}
+
+
+.pricing-info {
+    font-family: var(--font-serif), serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    gap: 16px;
+}
+
+.pricing-info .current-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-cyan);
+}
+.pricing-info > p:last-child {
+    text-decoration: line-through;
+    font-size: 0.625rem;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--clr-cyan);
+    inline-size: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 0.375rem;
+}
+
+.product-description button > p {
+    font-family: var(--font-sans-serif);
+    font-weight: 700;
+    color: var(--clr-white);
+}
+
+button:hover {
+    background-color: rgb(38, 73, 60);
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
