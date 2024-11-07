@@ -21,8 +21,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://frost3dwave.github.io/Product-preview-card-component/)
+- [Solution URL:](https://www.frontendmentor.io/solutions/product-preview-card-component-0rxZQmL3FC)
+- [Live Site URL:](https://frost3dwave.github.io/Product-preview-card-component/)
 
 ### Built with
 
