@@ -165,5 +165,26 @@ button:hover {
     cursor: pointer;
 }
 
+@media (min-width: 48rem) {
+    .wrapper {
+        flex-direction: row;
+        block-size: 30.681875rem;
+        inline-size: calc(288px * 2);
+    }
+
+    .image-container {
+        block-size: 100%;
+    }
+
+    img {
+        block-size: 100%;
+        border-radius: 0.625rem, 0, 0.625rem, 0;
+        object-fit: contain;
+    }
+
+    .product-description {
+        block-size: 100%;
+    }
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
